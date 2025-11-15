@@ -1,0 +1,10 @@
+export interface Carta {
+  id: string;
+  nombre: string;
+  descripcion: string;
+  ataque: number;
+  defensa: number;
+  imagen: string;
+}
+
+export type ModoFormulario = 'crear' | 'editar';
