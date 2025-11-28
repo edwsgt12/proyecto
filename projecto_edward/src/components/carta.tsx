@@ -8,7 +8,7 @@ type Props = {
     imagen: string;
 }
 
-function DiseñoCarta({
+const DiseñoCarta = ({
     ataque,
     defensa,
     descripcion,
@@ -16,15 +16,16 @@ function DiseñoCarta({
     nombre,
     numero,
     tipo,
-}:Props) {
+}:Props)=>{
     return (
         <div>
+            <p>numero: {numero}</p>
             <h3> {nombre} (#{nombre})</h3>
             <img src={imagen} alt={nombre}/>
             <p>Tipo: {tipo}</p>
             <p>Ataque: {ataque}</p>
             <p>Defensa: {defensa}</p>
-            <p>{descripcion}</p>
+            <p>descripcion: {descripcion}</p>
         </div>
     );
 }
