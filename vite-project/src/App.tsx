@@ -124,11 +124,11 @@ const App: React.FC = () => {
           <div className="relative inline-block">
             <div className="absolute -inset-4 bg-gradient-to-r from-purple-400 to-blue-500 rounded-2xl blur-lg opacity-30"></div>
             <h1 className="relative text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-              🃏 Gestor de Cartas
+              🃏 Crea tu propia carta
             </h1>
           </div>
           <p className="text-gray-600 mt-4 text-lg max-w-2xl mx-auto leading-relaxed">
-            Crea y gestiona tu colección de cartas con este hermoso diseño difuminado
+            Crea y gestiona tu colección de cartas🥱
           </p>
         </header>
 
