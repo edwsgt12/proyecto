@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import DiseñoCarta from './components/carta';
+import Modal from './components/modal';
 
 const App = () => {
+  const [mostrarModal, setMostrarModal]= useState(false);
   return(
+    
   <div className="bg-linear-to-r from-cyan-500 to-gray-500 flex flex-wrap gap-6 p-8 bg-gray-200 justify-center min-h-screen">
     <div className="bg-linear-to-r from-gray-700 to-red-400 rounded-2xl">
       <DiseñoCarta 
@@ -11,10 +15,12 @@ const App = () => {
       tipo = "Demonio"
       ataque = {10.000}
       defensa={5.000}
-      descripcion="Un joven con mucha resistencia aunque nacido sin magia, bendecido por espadas capacez de repeler magia (Espada de Danma, Espada de Shukuma, Espada de Metsuma y Espada de Zanma.) muy poderoso en ataque fisico y con un demonio en su interior, pero con 0 ataque magico."
+      mostrarDetalleCarta={()=> setMostrarModal(false)}
       />
     </div>
+      {mostrarModal && <Modal descripcion='xs'/>}
 
+    <div className="bg-linear-to-r from-gray-700 to-green-400 rounded-2xl">
       <DiseñoCarta  
       numero = {100}
       nombre = "Deku"
@@ -22,8 +28,10 @@ const App = () => {
       tipo = "Heroe"
       ataque = {7.000}
       defensa={6.000}
-      descripcion="El heredero del One For All. Su cuerpo es un templo de poder, aunque a veces frágil ante su propia fuerza. No se detendrá hasta salvar a todos, usando su cuerpo y su mente para forjar su propio camino como héroe."
       />
+    </div>
+
+  
     </div>)
 }
 export default App;
